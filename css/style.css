@@ -1,0 +1,1095 @@
+/* Custom Properties for Neon Colors */
+:root {
+  --primary: #175468; /* Blue-Green Neon */
+  --bg: #010101; /* Deep Black Background */
+  --ungu: #941270; /* Purple Neon */
+  --text-color: #e0e0e0;
+  --glow-strength: 0 0 15px, 0 0 25px; /* Base glow for text/elements */
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Orbitron", sans-serif; /* Futuristic font */
+  background-color: var(--bg);
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scroll from animations */
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+  color: var(--ungu);
+  text-shadow: var(--glow-strength) var(--ungu);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Orbitron", sans-serif;
+  color: var(--text-color);
+}
+
+.neon-text {
+  color: var(--primary);
+  text-shadow: var(--glow-strength) var(--primary);
+  animation: pulsateNeon 1.5s infinite alternate;
+}
+
+@keyframes pulsateNeon {
+  from {
+    text-shadow: var(--glow-strength) var(--primary);
+  }
+  to {
+    text-shadow: var(--glow-strength) var(--primary), 0 0 30px var(--primary),
+      0 0 50px var(--primary);
+  }
+}
+
+/* --- Navbar --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3%;
+  background-color: rgba(1, 1, 1, 0.7); /* Slightly transparent background */
+  border-bottom: 2px solid var(--primary);
+  box-shadow: 0 0 15px var(--primary);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between logo and icons */
+}
+
+.logo-text {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-shadow: var(--glow-strength) var(--primary);
+  transition: all 0.3s ease;
+}
+
+.logo-text:hover {
+  color: var(--ungu);
+  text-shadow: var(--glow-strength) var(--ungu);
+}
+
+.nav-menu a {
+  margin-left: 2rem;
+  font-size: 1.1rem;
+  font-family: "Share Tech Mono", monospace; /* Techy font for menu links */
+  position: relative;
+}
+
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--ungu);
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+  box-shadow: var(--glow-strength) var(--ungu);
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+.menu-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.search-icon,
+.hamburger-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--primary);
+  text-shadow: var(--glow-strength) var(--primary);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.search-icon:hover,
+.hamburger-icon:hover {
+  color: var(--ungu);
+  text-shadow: var(--glow-strength) var(--ungu);
+}
+
+.hamburger-icon {
+  display: none; /* Hidden on desktop, shown on tablet/mobile */
+}
+
+/* --- Search Overlay --- */
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.search-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.search-bar {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+}
+
+.search-overlay #searchInput {
+  width: 100%;
+  padding: 15px 50px 15px 20px;
+  background-color: var(--bg);
+  border: 2px solid var(--primary);
+  border-radius: 5px;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  outline: none;
+  box-shadow: var(--glow-strength) var(--primary);
+  transition: box-shadow 0.3s ease;
+}
+
+.search-overlay #searchInput:focus {
+  box-shadow: var(--glow-strength) var(--ungu);
+  border-color: var(--ungu);
+}
+
+.close-search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+  color: var(--primary);
+  cursor: pointer;
+  text-shadow: var(--glow-strength) var(--primary);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.close-search-icon:hover {
+  color: var(--ungu);
+  text-shadow: var(--glow-strength) var(--ungu);
+}
+
+/* --- Hamburger Overlay (Mobile/Tablet) --- */
+.hamburger-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1002;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.hamburger-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hamburger-menu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+}
+
+.hamburger-menu-content a {
+  font-size: 2.5rem;
+  color: var(--primary);
+  text-shadow: var(--glow-strength) var(--primary);
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu-content a:hover {
+  color: var(--ungu);
+  text-shadow: var(--glow-strength) var(--ungu), 0 0 30px var(--ungu);
+}
+
+.close-hamburger-icon {
+  position: absolute;
+  top: -50px; /* Adjust as needed */
+  right: -50px; /* Adjust as needed */
+  font-size: 2.5rem;
+  color: var(--primary);
+  cursor: pointer;
+  text-shadow: var(--glow-strength) var(--primary);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.close-hamburger-icon:hover {
+  color: var(--ungu);
+  text-shadow: var(--glow-strength) var(--ungu);
+}
+
+/* --- Overlay Modals (Member & Moment) --- */
+
+/* Base styles for the overlay container */
+.member-overlay,
+.moment-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1005;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.member-overlay.active,
+.moment-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Styles for the content container inside the overlay */
+.overlay-content {
+  background-color: var(--bg);
+  border: 2px solid var(--primary);
+  border-radius: 10px;
+  padding: 30px;
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+  box-shadow: var(--glow-strength) var(--primary), 0 0 30px var(--ungu);
+  text-align: center;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+  /* Add margin around content to make space for external buttons/indicator */
+  margin: 0 80px; /* Adjust as needed for button spacing */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Scale up the content when the overlay is active */
+.member-overlay.active .overlay-content,
+.moment-overlay.active .overlay-content {
+  transform: scale(1);
+}
+
+/* Close icon styling */
+.close-overlay-icon {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: var(--primary);
+  font-size: 2.5rem;
+  cursor: pointer;
+  text-shadow: var(--glow-strength) var(--primary);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  z-index: 10; /* Ensure close button is on top */
+}
+
+.close-overlay-icon:hover {
+  color: var(--ungu);
+  text-shadow: var(--glow-strength) var(--ungu);
+}
+
+/* --- Member Overlay Specific Styles --- */
+.member-detail-content .member-overlay-inner {
+  display: flex;
+  flex-direction: column; /* Default to column for smaller screens */
+  align-items: center;
+  gap: 25px;
+}
+
+.member-detail-content .member-overlay-photo img {
+  max-width: 200px; /* Size of the member photo */
+  height: 200px; /* Keep height same as width for round shape */
+  border-radius: 50%; /* Makes the image round */
+  border: 3px solid var(--ungu); /* Neon border */
+  box-shadow: 0 0 15px var(--ungu); /* Glow effect */
+  object-fit: cover; /* Ensures image covers the area without distortion */
+}
+
+.member-detail-content .member-overlay-info h3 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  text-shadow: var(--glow-strength) var(--primary);
+}
+
+.member-detail-content .member-overlay-info p {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: var(--text-color);
+}
+
+.member-detail-content .member-overlay-info a {
+  color: var(--ungu);
+  text-shadow: 0 0 8px var(--ungu);
+  transition: all 0.3s ease;
+}
+
+.member-detail-content .member-overlay-info a:hover {
+  color: var(--primary);
+  text-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary);
+}
+
+/* --- Moment Overlay Specific Styles --- */
+.moment-image-content img {
+  max-width: 100vh;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 2px solid var(--ungu);
+  box-shadow: 0 0 10px var(--ungu);
+}
+
+.moment-image-content p {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+/* --- Overlay Navigation Buttons & Indicator (MODIFIKASI INI) --- */
+.overlay-navigation {
+  position: absolute; /* Relative to its parent (.member-overlay/.moment-overlay) */
+  top: 50%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(-50%);
+  z-index: 1006; /* Higher than overlay-content and close button */
+  pointer-events: none; /* Allow clicks to pass through if not on button */
+  padding: 0 20px; /* Padding from screen edges */
+}
+
+.overlay-navigation .nav-button {
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  font-size: 2.5rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: var(--glow-strength) var(--primary);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  pointer-events: all;
+  user-select: none;
+  opacity: 0.7;
+  /* Position buttons outside the content box */
+  /* No need for specific left/right positioning here because flexbox handles it */
+}
+
+.overlay-navigation .nav-button:hover {
+  background-color: var(--ungu);
+  color: var(--bg);
+  box-shadow: var(--glow-strength) var(--ungu), 0 0 30px var(--ungu);
+  opacity: 1;
+}
+
+/* Hide buttons if only one slide is available */
+.overlay-navigation .nav-button.hidden {
+  display: none;
+}
+
+.overlay-navigation .slide-indicator {
+  position: absolute; /* Posisikan secara absolut */
+  bottom: -170px; /* Jarak dari bawah konten overlay, sesuaikan jika perlu */
+  left: 50%; /* Pindahkan ke tengah horizontal */
+  transform: translateX(-50%); /* Penyesuaian untuk centering sempurna */
+  color: var(--text-color);
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1.2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 15px;
+  border-radius: 20px;
+  border: 1px solid var(--ungu);
+  box-shadow: 0 0 10px var(--ungu);
+  pointer-events: none;
+  white-space: nowrap; /* Mencegah teks pecah baris */
+}
+
+/* Animation for slide transition */
+/* Apply this to the main content div inside the overlay, e.g., .member-detail-content */
+.member-detail-content,
+.moment-image-content {
+  position: relative; /* Keep this for internal elements */
+  overflow: hidden;
+  /* Remove the direct transition from here if you want content to "snap" into place for animation */
+  /* For a sliding effect, we will animate the content inside, not the .overlay-content itself directly */
+  transition: none; /* Reset this to remove default transform transition */
+}
+
+/* New: Wrapper for content to apply animations */
+.member-overlay-content-wrapper,
+.moment-overlay-content-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute; /* Position within .overlay-content */
+  top: 0;
+  left: 0;
+  display: flex; /* To contain inner elements */
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out; /* Apply transition here */
+}
+
+/* Adjust child elements to fill the wrapper */
+.member-detail-content .member-overlay-inner,
+.moment-image-content img,
+.moment-image-content p {
+  flex-shrink: 0; /* Prevent shrinking if inside flex */
+  width: 100%; /* Take full width of wrapper */
+}
+
+/* Animation classes - apply these to the new wrapper */
+.slide-in-right {
+  animation: slideInRight 0.4s forwards;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.4s forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-out-left {
+  animation: slideOutLeft 0.4s forwards;
+}
+
+.slide-out-right {
+  animation: slideOutRight 0.4s forwards;
+}
+
+@keyframes slideOutLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Ensure overlay content resets after animation */
+.overlay-content.reset-transform {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+  animation: none !important;
+}
+
+/* Responsive adjustments for buttons */
+@media (max-width: 767px) {
+  .overlay-navigation {
+    padding: 0 10px;
+  }
+  .overlay-navigation .nav-button {
+    font-size: 2rem;
+    padding: 8px 12px;
+  }
+  .overlay-navigation .slide-indicator {
+    font-size: 1rem;
+    padding: 3px 10px;
+    bottom: -220px; /* Sesuaikan jarak di mobile */
+  }
+  .overlay-content {
+    margin: 0 50px;
+  }
+}
+
+/* --- Responsive Adjustments for Overlays --- */
+@media (min-width: 768px) {
+  .member-detail-content .member-overlay-inner {
+    flex-direction: row; /* Row layout for larger screens */
+    text-align: left;
+  }
+  .member-detail-content .member-overlay-info {
+    text-align: left;
+  }
+}
+
+@media (max-width: 767px) {
+  .overlay-content {
+    padding: 20px;
+    max-width: 95%;
+  }
+  .close-overlay-icon {
+    font-size: 2rem;
+    top: 10px;
+    right: 15px;
+  }
+  .member-detail-content .member-overlay-photo img {
+    max-width: 150px;
+    height: 150px;
+  }
+  .member-detail-content .member-overlay-info h3 {
+    font-size: 1.8rem;
+  }
+  .member-detail-content .member-overlay-info p,
+  .moment-image-content p {
+    font-size: 1rem;
+  }
+}
+
+/* --- Main Content Sections --- */
+main {
+  padding-top: 100px; /* Space for fixed navbar */
+}
+
+section {
+  padding: 80px 5%;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+section h2 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+  text-shadow: var(--glow-strength) var(--primary);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  background: url("https://via.placeholder.com/1920x1080/010101/0A1B2D?text=FUTURISTIC+BACKGROUND")
+    no-repeat center center/cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+}
+
+.hero-section h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  text-shadow: var(--glow-strength) var(--primary), 0 0 50px var(--primary);
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  font-family: "Share Tech Mono", monospace;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.btn {
+  padding: 15px 30px;
+  border: 2px solid var(--primary);
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.neon-btn {
+  background-color: transparent;
+  color: var(--primary);
+  box-shadow: var(--glow-strength) var(--primary);
+}
+
+.neon-btn:hover {
+  background-color: var(--primary);
+  color: var(--bg);
+  box-shadow: var(--glow-strength) var(--primary), 0 0 30px var(--primary);
+  transform: translateY(-5px);
+}
+
+/* --- Members Section --- */
+.members-section {
+  background-color: var(--bg);
+  padding-bottom: 100px; /* Add bottom padding for connectors */
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(400px, 1fr)
+  ); /* Wider for side info */
+  gap: 80px 40px; /* Larger gap between cards for connectors */
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 50px;
+  position: relative;
+}
+
+.member-card {
+  background-color: rgba(1, 1, 1, 0.5);
+  border: 1px solid var(--primary);
+  border-radius: 15px; /* Slightly more rounded */
+  padding: 25px;
+  display: flex; /* Use flex for content inside */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: var(--glow-strength) var(--primary);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  overflow: hidden; /* Important for clipping connectors */
+}
+
+.member-card:hover {
+  transform: scale(1.03); /* Slightly enlarge on hover */
+  box-shadow: var(--glow-strength) var(--ungu), 0 0 30px var(--ungu);
+  border-color: var(--ungu);
+}
+
+.member-content {
+  display: flex; /* For V-shape and side info */
+  align-items: center;
+  gap: 25px; /* Space between V-shape and info */
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  justify-content: center; /* Center when wrapped */
+  position: relative;
+  z-index: 10; /* Ensure content is above connectors */
+}
+
+.v-shape-container {
+  width: 180px; /* V container size */
+  height: 180px;
+  position: relative;
+  overflow: hidden; /* Important for clipping the image to the V-shape */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg); /* V-shape background color */
+  border: 2px solid var(--ungu); /* V-shape border */
+  box-shadow: var(--glow-strength) var(--ungu);
+  transition: all 0.3s ease;
+  /* Key part: Apply V-shape directly to the container */
+  clip-path: polygon(
+    50% 0%,
+    0% 100%,
+    100% 100%
+  ); /* Creates a basic V-shape triangle */
+  transform: rotate(180deg); /* Rotate for downward-pointing V */
+}
+
+.member-card:hover .v-shape-container {
+  border-color: var(--primary);
+  box-shadow: var(--glow-strength) var(--primary), 0 0 30px var(--primary);
+}
+
+.v-shape {
+  /* This will now be the wrapper for the image, no longer clip-path */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Revert rotation so the image inside is not upside down */
+  transform: rotate(-180deg); /* Revert inner content to be upright */
+  overflow: hidden; /* Important so image doesn't escape v-shape */
+}
+
+.v-shape img {
+  width: 100%; /* Image will fill v-shape width */
+  height: 100%; /* Image will fill v-shape height */
+  object-fit: cover; /* Important! Ensures image fills area without distortion */
+  /* Filters and transitions remain the same */
+  filter: brightness(0.8) contrast(1.2);
+  transition: filter 0.3s ease;
+  /* Remove clip-path from image as it's now on the container */
+  /* Also remove transform from image as it's now on the v-shape wrapper */
+}
+
+.member-card:hover .v-shape img {
+  filter: brightness(1) contrast(1.3);
+}
+
+.member-info {
+  text-align: left; /* Text next to V-shape */
+  font-family: "Share Tech Mono", monospace;
+  flex-grow: 1; /* To take up remaining space */
+}
+
+.member-info h3 {
+  font-size: 1.8rem; /* Larger */
+  margin-bottom: 8px;
+  color: var(--text-color);
+  text-shadow: var(--glow-strength) var(--primary);
+}
+
+.member-info p {
+  font-size: 1.1rem; /* Larger */
+  color: var(--text-color);
+  margin-bottom: 5px;
+}
+
+.member-info a {
+  color: var(--ungu);
+  text-shadow: 0 0 8px var(--ungu);
+  transition: all 0.3s ease;
+}
+
+.member-info a:hover {
+  color: var(--primary);
+  text-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary);
+}
+
+/* Neon Connector Lines - More dynamic and abundant */
+/* These are the "living" neon lines with pseudo-elements and animation */
+.neon-connector {
+  position: absolute;
+  width: 50px; /* Base connector length */
+  height: 3px; /* Thickness */
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--ungu),
+    var(--primary),
+    var(--ungu),
+    transparent
+  );
+  background-size: 300% 100%; /* For flowing animation */
+  box-shadow: 0 0 5px var(--primary), 0 0 15px var(--ungu);
+  z-index: 5; /* Below content, above background */
+  opacity: 0.8;
+  animation: flowConnector 3s linear infinite; /* Flowing animation */
+}
+
+@keyframes flowConnector {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+/* Specific positioning for each card corner */
+.neon-connector.top-left {
+  top: -1px;
+  left: -1px;
+  width: 50%; /* Half card width */
+  transform-origin: top left;
+  transform: rotate(45deg); /* Angle towards corner */
+}
+
+.neon-connector.top-right {
+  top: -1px;
+  right: -1px;
+  width: 50%;
+  transform-origin: top right;
+  transform: rotate(-45deg);
+}
+
+.neon-connector.bottom-left {
+  bottom: -1px;
+  left: -1px;
+  width: 50%;
+  transform-origin: bottom left;
+  transform: rotate(-45deg);
+}
+
+.neon-connector.bottom-right {
+  bottom: -1px;
+  right: -1px;
+  width: 50%;
+  transform-origin: bottom right;
+  transform: rotate(45deg);
+}
+
+/* --- Moments Section --- */
+.moments-section {
+  background-color: var(--bg);
+}
+
+.moments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 50px;
+}
+
+.moment-item {
+  background-color: rgba(1, 1, 1, 0.5);
+  border: 1px solid var(--ungu);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--glow-strength) var(--ungu);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.moment-item:hover {
+  transform: scale(1.05);
+  box-shadow: var(--glow-strength) var(--primary), 0 0 40px var(--primary);
+  border-color: var(--primary);
+}
+
+.moment-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+.moment-item:hover img {
+  filter: brightness(1.2);
+}
+
+.moment-caption {
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: var(--text-color);
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1rem;
+  text-shadow: 0 0 5px var(--ungu);
+}
+
+/* --- Footer --- */
+footer {
+  padding: 30px 5%;
+  text-align: center;
+  background-color: rgba(1, 1, 1, 0.7);
+  border-top: 2px solid var(--primary);
+  box-shadow: 0 0 15px var(--primary);
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.hidden {
+  display: none !important;
+}
+/* Neon Effect for Dropdown */
+.search-results {
+  position: absolute;
+  background-color: #000;
+  border: 1px solid #941270;
+  box-shadow: 0 0 15px var(--primary), 0 0 35px var(--ungu);
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  width: 100%;
+  display: none;
+  border-radius: 8px;
+  color: var(--primary);
+  font-family: "Courier New", monospace;
+}
+
+.search-results .result-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.search-results .result-item:hover {
+  background-color: #1f1f1f;
+  color: #01c0ff;
+  box-shadow: 0 0 5px var(--primary), 0 0 15px var(--ungu);
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 992px) {
+  .navbar {
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: center;
+    padding: 1rem 5%;
+  }
+
+  .nav-left {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 15px; /* Space between logo/icons and menu on wrap */
+  }
+
+  .nav-menu {
+    display: none; /* Hide regular menu on tablet/mobile */
+  }
+
+  .hamburger-icon {
+    display: block; /* Show hamburger icon */
+  }
+
+  .hero-section h1 {
+    font-size: 3rem;
+  }
+
+  .hero-section p {
+    font-size: 1.2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  section {
+    padding: 60px 5%;
+  }
+
+  section h2 {
+    font-size: 2.5rem;
+  }
+
+  .members-grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(300px, 1fr)
+    ); /* Adjust card size */
+    gap: 60px 20px;
+  }
+
+  .member-content {
+    flex-direction: column; /* Revert to vertical layout */
+    text-align: center;
+    gap: 15px;
+  }
+
+  .member-info {
+    text-align: center; /* Center if wrapped */
+  }
+
+  .v-shape-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .member-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .member-info p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+
+  section h2 {
+    font-size: 2rem;
+  }
+
+  .members-grid {
+    grid-template-columns: 1fr; /* Stack cards vertically */
+  }
+
+  .member-card {
+    padding: 20px;
+  }
+
+  .v-shape-container {
+    width: 120px;
+    height: 120px;
+  }
+
+  .moment-item {
+    margin: 0 10px; /* Add some side margin for smaller screens */
+  }
+
+  .moment-item img {
+    height: 180px;
+  }
+}

@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VORTEXA 24</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/2f2fe337ce.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="nav-left">
+        <a href="#" class="logo-text">VORTEXA 24</a>
+        <div class="menu-icons">
+          <i class="fas fa-search search-icon" id="searchIcon"></i>
+          <i class="fas fa-bars hamburger-icon" id="hamburgerIcon"></i>
+        </div>
+      </div>
+      <nav class="nav-menu" id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#members">Member</a>
+        <a href="#moments">Moment</a>
+      </nav>
+    </header>
+
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-bar">
+        <input
+          type="text"
+          placeholder="Search VORTEXA 24..."
+          id="searchInput"
+        />
+        <div id="searchResults" class="search-results"></div>
+        <i class="fas fa-times close-search-icon" id="closeSearch"></i>
+      </div>
+    </div>
+
+    <div class="hamburger-overlay" id="hamburgerOverlay">
+      <nav class="hamburger-menu-content">
+        <a href="#home">Home</a>
+        <a href="#members">Member</a>
+        <a href="#moments">Moment</a>
+        <i class="fas fa-times close-hamburger-icon" id="closeHamburger"></i>
+      </nav>
+    </div>
+
+    <div class="member-overlay" id="memberOverlay">
+      <div class="overlay-navigation">
+        <button class="nav-button prev-button" id="prevMemberButton">
+          &#10094;
+        </button>
+        <span class="slide-indicator" id="memberSlideIndicator">1/1</span>
+        <button class="nav-button next-button" id="nextMemberButton">
+          &#10095;
+        </button>
+      </div>
+
+      <div class="overlay-content member-detail-content">
+        <i class="fas fa-times close-overlay-icon" id="closeMemberOverlay"></i>
+        <div class="member-overlay-inner">
+          <div class="member-overlay-photo">
+            <img src="" alt="Member Photo" id="overlayMemberPhoto" />
+          </div>
+          <div class="member-overlay-info">
+            <h3 id="overlayMemberName"></h3>
+            <p id="overlayMemberOrigin"></p>
+
+            <p id="overlayMemberBio"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="moment-overlay" id="momentOverlay">
+      <div class="overlay-navigation">
+        <button class="nav-button prev-button" id="prevMomentButton">
+          &#10094;
+        </button>
+        <span class="slide-indicator" id="momentSlideIndicator">1/1</span>
+        <button class="nav-button next-button" id="nextMomentButton">
+          &#10095;
+        </button>
+      </div>
+
+      <div class="overlay-content moment-image-content">
+        <i class="fas fa-times close-overlay-icon" id="closeMomentOverlay"></i>
+        <img src="" alt="Moment Image" id="overlayMomentImage" />
+        <p id="overlayMomentCaption"></p>
+      </div>
+    </div>
+
+    <main>
+      <section id="home" class="hero-section">
+        <h1>WELCOME TO <span class="neon-text">VORTEXA 24</span></h1>
+        <p>Unity IN Dignity.</p>
+        <div class="hero-buttons">
+          <a href="#members" class="btn neon-btn">Explore Members</a>
+          <a href="#moments" class="btn neon-btn">View Moments</a>
+        </div>
+      </section>
+
+      <section id="members" class="members-section">
+        <h2>Our <span class="neon-text">Vortexa</span> Members</h2>
+        <div class="members-grid">
+          <div
+            class="member-card"
+            data-member-name="Ceyy"
+            data-member-origin="Enrekang"
+            data-member-ig="@sriiall_caahyy"
+            data-member-photo="img/member1.jpg"
+            data-member-bio="Nikmati masa muda mu dengan ceria dan penuh cerita,bukan terluka karena cinta. "
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img src="img/member1.jpg" alt="Member Photo" />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>Ceyy</h3>
+                <p>Enrekang</p>
+                <p>
+                  IG:
+                  <a
+                    href="https://www.instagram.com/sriiall.caahyy/"
+                    target="_blank"
+                    >@sriiall_caahyy</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+          <div
+            class="member-card"
+            data-member-name="Afra"
+            data-member-origin="Enrekang"
+            data-member-ig="@nur_afraaa"
+            data-member-photo="img/member2.jpg"
+            data-member-bio="Walau Sudah Terwujud, jangan lupa bersujud."
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img src="img/member2.jpg" alt="Member Photo" />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>Afra</h3>
+                <p>Enrekang</p>
+                <p>
+                  IG:
+                  <a
+                    href="https://www.instagram.com/nur_afraaa/"
+                    target="_blank"
+                    >@nur_afraaa</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+          <div
+            class="member-card"
+            data-member-name="Acaa"
+            data-member-origin="Pulau Taliabu"
+            data-member-ig="@acaaaaxx_14"
+            data-member-photo="img/member3.jpg"
+            data-member-bio="Tidak perlu kata-kata, yg penting punya harta."
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img src="img/member3.jpg" alt="Member Photo" />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>Acaa</h3>
+                <p>Pulau Taliabu</p>
+                <p>
+                  IG:
+                  <a
+                    href="https://www.instagram.com/acaaaaxx_14/"
+                    target="_blank"
+                    >@acaaaaxx_14</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+          <div
+            class="member-card"
+            data-member-name="Dewa"
+            data-member-origin="Mamasa"
+            data-member-ig="@dewa_selalu_always"
+            data-member-photo="img/member4.jpg"
+            data-member-bio="pandai berkata, lupa berkaca."
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img src="img/member4.jpg" alt="Member Photo" />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>Dewa</h3>
+                <p>Mamasa</p>
+                <p>
+                  IG:
+                  <a
+                    href="https://www.instagram.com/dewa_selalu_always/"
+                    target="_blank"
+                    >@dewa_selalu_always</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+          <div
+            class="member-card"
+            data-member-name="Dell"
+            data-member-origin="Poso"
+            data-member-ig="@adelsfrisca76"
+            data-member-photo="img/member5.jpg"
+            data-member-bio="Berpikir positiflah, walaupun dompet mu isi nya negatif."
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img src="img/member5.jpg" alt="Member Photo" />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>Dell</h3>
+                <p>Toraja</p>
+                <p>
+                  IG:
+                  <a
+                    href="https://www.instagram.com/adelfrisca76/"
+                    target="_blank"
+                    >@adelfrisca76</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+          <div
+            class="member-card"
+            data-member-name="Imam"
+            data-member-origin="Pangkep"
+            data-member-ig="@khaerulimam.idris"
+            data-member-photo="img/member6.jpg"
+            data-member-bio="Pada Akhirnya,hadiah terindah yg diberikan oleh waktu adalah kenangan."
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img src="img/member6.jpg" alt="Member Photo" />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>Imam</h3>
+                <p>Pangkep</p>
+                <p>
+                  IG:
+                  <a
+                    href="https://www.instagram.com/khaerulimam.idris/"
+                    target="_blank"
+                    >@khaerulimam.idris</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+          <div
+            class="member-card"
+            data-member-name="Sam"
+            data-member-origin="Bandung"
+            data-member-ig="@member7_ig"
+            data-member-photo="https://via.placeholder.com/150/010101/175468?text=MEMBER+7"
+            data-member-bio="Motivasi tanpa aksi,hanyalah halusinasi."
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img
+                    src="https://via.placeholder.com/150/010101/175468?text=MEMBER+2"
+                    alt="Member Photo"
+                  />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>Sam</h3>
+                <p>Bulukumba</p>
+                <p>
+                  IG:
+                  <a href="https://www.instagram.com/isam3987/" target="_blank"
+                    >@isam3987</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+          <div
+            class="member-card"
+            data-member-name="Al"
+            data-member-origin="Ntt"
+            data-member-ig="@member8_ig"
+            data-member-photo="img/member8.jpg"
+            data-member-bio="Hidup Itu Introspeksi,bukan haus validasi."
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img src="img/member8.jpg" alt="Member Photo" />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>Al</h3>
+                <p>Ntt</p>
+                <p>IG: <a href="#" target="_blank">@member2_ig</a></p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+          <div
+            class="member-card"
+            data-member-name="Ali"
+            data-member-origin="Bandung"
+            data-member-ig="@member9_ig"
+            data-member-photo="img/member9.jpg"
+            data-member-bio="Terkadang janji tak lebih dari sekedar ilusi."
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img src="img/member9.jpg" alt="Member Photo" />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>Ali</h3>
+                <p>Bima</p>
+                <p>
+                  IG:
+                  <a
+                    href="https://www.instagram.com/al_junior42/"
+                    target="_blank"
+                    >@al_junior42</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+          <div
+            class="member-card"
+            data-member-name="Muaz kunnn"
+            data-member-origin="Bandung"
+            data-member-ig="@member10_ig"
+            data-member-photo="img/member10.jpg"
+            data-member-bio="Sebelum sedingin es,kita pernah sehangat koyo. 🥵🥶"
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img src="img/member10.jpg" alt="Member Photo" />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>Muaz</h3>
+                <p>Maros</p>
+                <p>
+                  IG:
+                  <a href="https://www.instagram.com/muaz_0511/" target="_blank"
+                    >@muaz_0511</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+          <div
+            class="member-card"
+            data-member-name="Ardi"
+            data-member-origin="Wajo"
+            data-member-ig="@member11_ig"
+            data-member-photo="img/member11.jpg"
+            data-member-bio="Lelah itu pasti,tapi menyerah bukan solusi."
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img src="img/member11.jpg" alt="Member Photo" />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>Ardhy</h3>
+                <p>Sengkang</p>
+                <p>
+                  IG:
+                  <a
+                    href="https://www.instagram.com/ardhywahyuhidayat/"
+                    target="_blank"
+                    >@ardhywahyuhidayat</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+          <div
+            class="member-card"
+            data-member-name="Nama Member 12"
+            data-member-origin="Bandung"
+            data-member-ig="@member12_ig"
+            data-member-photo="img/member12.jpg"
+            data-member-bio="Badan Butuh Liburan,dompet butuh lembaran."
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img src="img/member12.jpg" alt="Member Photo" />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>Vani</h3>
+                <p>Mamasa</p>
+                <p>
+                  IG:
+                  <a
+                    href="https://www.instagram.com/vani042121/"
+                    target="_blank"
+                    >@vani042121</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+          <div
+            class="member-card"
+            data-member-name="Ahyar"
+            data-member-origin="Bulukumba"
+            data-member-ig="@as_ahyar"
+            data-member-photo="img/member13.jpg"
+            data-member-bio="Tiada Jalan Tanpa Debu, Tiada Kesuksesan Tanpa Doa Ibu."
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img src="img/member13.jpg" alt="Member Photo" />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>Ahyar</h3>
+                <p>Bulukkumba</p>
+                <p>
+                  IG:
+                  <a
+                    href="https://www.instagram.com/as_ahyar017/"
+                    target="_blank"
+                    >@as_ahyar</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+          <div
+            class="member-card"
+            data-member-name="Ilmi"
+            data-member-origin="Sinjai"
+            data-member-ig="@member14_ig"
+            data-member-photo="img/member14.jpg"
+            data-member-bio="Fisik hanyalah fatamorgana, yang lenyap termakan usia."
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img src="img/member14.jpg" alt="Member Photo" />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>Ilmi</h3>
+                <p>Sinjai</p>
+                <p>
+                  IG:
+                  <a
+                    href="https://www.instagram.com/nurulilmi.nn/"
+                    target="_blank"
+                    >@nurulilmi.nn</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+
+          <div
+            class="member-card"
+            data-member-name="Nama Member 16"
+            data-member-origin="Bandung"
+            data-member-ig="@member16_ig"
+            data-member-photo="img/member16.jpg"
+            data-member-bio="Ibumu melahirkan dengan nyawa dan darah,maka sangatlah lucu jika kau menyerah hanya dengan keringat."
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img src="img/member16.jpg" alt="Member Photo" />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>ugi</h3>
+                <p>Sinjai</p>
+                <p>
+                  IG:
+                  <a
+                    href="https://www.instagram.com/muhammadfarid_muqiem/"
+                    target="_blank"
+                    >@muhammadfarid_muqiem</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+          <div
+            class="member-card"
+            data-member-name="Uni"
+            data-member-origin="Bandung"
+            data-member-ig="@member17_ig"
+            data-member-photo="https://via.placeholder.com/150/010101/175468?text=MEMBER+17"
+            data-member-bio="Terkadang jalan terbaik adalah Jalan Jalan."
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img
+                    src="https://via.placeholder.com/150/010101/175468?text=MEMBER+2"
+                    alt="Member Photo"
+                  />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>Uni</h3>
+                <p>Bulukumba</p>
+                <p>
+                  IG:
+                  <a
+                    href="https://www.instagram.com/miraeparkjm13/"
+                    target="_blank"
+                    >@miraeparkjm13</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+
+          <div
+            class="member-card"
+            data-member-name="Aidil"
+            data-member-origin="Makassar"
+            data-member-ig="@member19_ig"
+            data-member-photo="img/member19.jpg"
+            data-member-bio="Tetap semangat dan jangan menyerah,semoga lelah mu menjadi jadi."
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img src="img/member19.jpg" alt="Member Photo" />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>Aidil</h3>
+                <p>Makassar</p>
+                <p>
+                  IG:
+                  <a href="https://www.instagram.com/ayez.10/" target="_blank"
+                    >@Ayez.10</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+          <div
+            class="member-card"
+            data-member-name="Citos"
+            data-member-origin="Enrekang"
+            data-member-ig="@member20_ig"
+            data-member-photo="img/member20.jpg"
+            data-member-bio="Datang dengan harapan, pulang dengan impian."
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img src="img/member20.jpg" alt="Member Photo" />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>Citos</h3>
+                <p>Enrekang</p>
+                <p>
+                  IG:
+                  <a href="https://www.instagram.com/_ihwaan_/" target="_blank"
+                    >@_ihwan_</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+          <div
+            class="member-card"
+            data-member-name="Hani"
+            data-member-origin="Buton"
+            data-member-ig="@member21_ig"
+            data-member-photo="img/member21.jpg"
+            data-member-bio="Jangan berfikir untuk sempurna,tapi berfikirlah untuk berguna."
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img src="img/member21.jpg" alt="Member Photo" />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>Hany</h3>
+                <p>Buton</p>
+                <p>
+                  IG:
+                  <a href="https://www.instagram.com/hn_nieee/" target="_blank"
+                    >@hn_nieee</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+          <div
+            class="member-card"
+            data-member-name="Zull"
+            data-member-origin="Gowa"
+            data-member-ig="@zlkfy_038"
+            data-member-photo="img/member22.jpg"
+            data-member-bio="Tak apa menjadi abu,demi seorang ratu bernama IBU."
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img src="img/member22.jpg" alt="Member Photo" />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>Zull</h3>
+                <p>Gowa</p>
+                <p>
+                  IG:
+                  <a href="https://www.instagram.com/zlkfy_038/" target="_blank"
+                    >@zlkfy_038</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+          <div
+            class="member-card"
+            data-member-name="Fajri"
+            data-member-origin="Sinjai"
+            data-member-ig="@member23_ig"
+            data-member-photo="img/member23.jpg"
+            data-member-bio="Hasil yang indah tidak terlahir, dari langkah yang mudah."
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img src="img/member23.jpg" alt="Member Photo" />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>Fajri</h3>
+                <p>Sinjai</p>
+                <p>
+                  IG:
+                  <a
+                    href="https://www.instagram.com/fajrialqdri/"
+                    target="_blank"
+                    >@fajrialqdri</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+          <div
+            class="member-card"
+            data-member-name="Yonce"
+            data-member-origin="Mamasa"
+            data-member-ig="@member24_ig"
+            data-member-photo="img/member24.jpg"
+            data-member-bio="Apapun yang menjadi takdirmu,akan mencari jalan nya untuk menemukanmu."
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img src="img/member24.jpg" alt="Member Photo" />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>Yonce</h3>
+                <p>Mamasa</p>
+                <p>
+                  IG:
+                  <a
+                    href="https://www.instagram.com/yonce.5243/"
+                    target="_blank"
+                    >@yonce.5243</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+          <div
+            class="member-card"
+            data-member-name="Mince"
+            data-member-origin="Mamasa"
+            data-member-ig="@member25_ig"
+            data-member-photo="img/member25.jpg"
+            data-member-bio="Jika bertemu dengan mu adalah sebuah buku,mungkin itu adalah bab favoritku."
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img src="img/member25.jpg" alt="Member Photo" />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>Mince</h3>
+                <p>Mamasa</p>
+                <p>
+                  IG:
+                  <a href="https://www.instagram.com/myn_cee/" target="_blank"
+                    >@myn_cee</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+          <div
+            class="member-card"
+            data-member-name="Lulu"
+            data-member-origin="Bulukumbu"
+            data-member-ig="@member26_ig"
+            data-member-photo="img/member26.jpg"
+            data-member-bio="Semoga kita dimampukan atas apa yang hari ini masih sebatas keinginan."
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img src="img/member26.jpg" alt="Member Photo" />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>Lulu</h3>
+                <p>Bulukumba</p>
+                <p>
+                  IG:
+                  <a href="https://www.instagram.com/lutsss13/" target="_blank"
+                    >@lutsss13</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+          <div
+            class="member-card"
+            data-member-name="Ayu"
+            data-member-origin="Bandung"
+            data-member-ig="@member27_ig"
+            data-member-photo="img/member27.jpg"
+            data-member-bio="Menangkan apa yang sedang kau perjuangkan."
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img src="img/member27.jpg" alt="Member Photo" />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>Ayu</h3>
+                <p>Makassar</p>
+                <p>
+                  IG:
+                  <a
+                    href="https://www.instagram.com/dwiiainun17/"
+                    target="_blank"
+                    >@dwiiainun17</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+          <div
+            class="member-card"
+            data-member-name="Kiyaa"
+            data-member-origin="Sinjai"
+            data-member-ig="@member28_ig"
+            data-member-photo="img/member28.jpg"
+            data-member-bio="Bersabarlah,Terkadang kita harus melewati hal terburuk,untuk mendapatkan hal terbaik."
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img src="img/member28.jpg" alt="Member Photo" />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>Kiyaa</h3>
+                <p>Sinjai</p>
+                <p>
+                  IG:
+                  <a href="https://www.instagram.com/nrlaskyah/" target="_blank"
+                    >@nrlaskyah</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+          <div
+            class="member-card"
+            data-member-name="Amel"
+            data-member-origin="Bandung"
+            data-member-ig="@member29_ig"
+            data-member-photo="img/member29.jpg"
+            data-member-bio="Hidup adalah perjalanan tanpa peta,terkadang tersesat di jalan yang tidak kita pilih."
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img src="img/member29.jpg" alt="Member Photo" />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>Amel</h3>
+                <p>Makassar</p>
+                <p>
+                  IG:
+                  <a
+                    href="https://www.instagram.com/lia_150206/"
+                    target="_blank"
+                    >@lia_150206</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+          <div
+            class="member-card"
+            data-member-name="Adrian"
+            data-member-origin="Bandung"
+            data-member-ig="@member30_ig"
+            data-member-photo="img/member30.jpg"
+            data-member-bio="Perjalanan seribu mil, dimulai dari satu langkah kecil."
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img src="img/member30.jpg" alt="Member Photo" />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>Codet</h3>
+                <p>Bulukumba</p>
+                <p>
+                  IG:
+                  <a
+                    href="https://www.instagram.com/andirian__/"
+                    target="_blank"
+                    >@andirian__</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+          <div
+            class="member-card"
+            data-member-name="Dira"
+            data-member-origin="Bulukumba"
+            data-member-ig="@member31_ig"
+            data-member-photo="img/member31.jpg"
+            data-member-bio="Hidupmu tidak akan berubah, sampai kau berubah."
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img src="img/member31.jpg" alt="Member Photo" />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>Dira</h3>
+                <p>Bulukumba</p>
+                <p>
+                  IG:
+                  <a
+                    href="https://www.instagram.com/hynexdraa_/"
+                    target="_blank"
+                    >@hynexdraa_</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+          <div
+            class="member-card"
+            data-member-name="Salsa"
+            data-member-origin="Bulukumba"
+            data-member-photo="img/member32.jpg"
+            data-member-bio="Rencana tuhan jauh lebih baik dari cita-cita terbaikmu."
+          >
+            <div class="member-content">
+              <div class="v-shape-container">
+                <div class="v-shape">
+                  <img src="img/member32.jpg" alt="Member Photo" />
+                </div>
+              </div>
+              <div class="member-info">
+                <h3>Salsa</h3>
+                <p>Bulukumba</p>
+                <p>
+                  IG:
+                  <a
+                    href="https://www.instagram.com/nurafifahzlsa/  "
+                    target="_blank"
+                    >@nurafifahzlsa</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="neon-connector top-left"></div>
+            <div class="neon-connector top-right"></div>
+            <div class="neon-connector bottom-left"></div>
+            <div class="neon-connector bottom-right"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="moments" class="moments-section">
+        <h2>Our <span class="neon-text">Shared Moments</span></h2>
+        <div class="moments-grid">
+          <div
+            class="moment-item"
+            data-moment-src="https://via.placeholder.com/600x400/010101/175468?text=MOMENT+1+FULL"
+            data-moment-caption="Ini adalah momen kebersamaan pertama kita!"
+          >
+            <img src="img/moment1.jpg" alt="Moment 1" />
+            <div class="moment-caption">
+              <p>Anjayyyyyy Mabaaa</p>
+              <p>20 oktober 2024</p>
+            </div>
+          </div>
+          <div
+            class="moment-item"
+            data-moment-src="https://via.placeholder.com/600x400/010101/941270?text=MOMENT+2+FULL"
+            data-moment-caption="Senyum ceria dalam setiap langkah."
+          >
+            <img src="img/moment2.jpg" alt="Moment 2" />
+            <div class="moment-caption">
+              <p>Ciwi-Ciwi</p>
+              <p>19 November 2024</p>
+            </div>
+          </div>
+          <div
+            class="moment-item"
+            data-moment-src="https://via.placeholder.com/600x400/010101/175468?text=MOMENT+3+FULL"
+            data-moment-caption="Momen tak terlupakan di acara peresmian."
+          >
+            <img src="img/moment3.jpg" alt="Moment 3" />
+            <div class="moment-caption">
+              <p>Sekumpulan Musang wkwkwk 😂</p>
+              <p>20 November 2024</p>
+            </div>
+          </div>
+          <div
+            class="moment-item"
+            data-moment-src="https://via.placeholder.com/600x400/010101/175468?text=MOMENT+3+FULL"
+            data-moment-caption="Momen tak terlupakan di acara peresmian."
+          >
+            <img src="img/moment4.jpg" alt="Moment 3" />
+            <div class="moment-caption">
+              <p>Pisang Epe</p>
+              <p>22 November 2024</p>
+            </div>
+          </div>
+          <div
+            class="moment-item"
+            data-moment-src="https://via.placeholder.com/600x400/010101/175468?text=MOMENT+3+FULL"
+            data-moment-caption="Momen tak terlupakan di acara peresmian."
+          >
+            <img src="img/moment5.jpg" alt="Moment 3" />
+            <div class="moment-caption">
+              <p>Impo BL</p>
+              <p>4 Desember 2024</p>
+            </div>
+          </div>
+
+          <div
+            class="moment-item"
+            data-moment-src="https://via.placeholder.com/600x400/010101/175468?text=MOMENT+3+FULL"
+            data-moment-caption="Momen tak terlupakan di acara peresmian."
+          >
+            <img src="img/moment8.jpg" alt="Moment 3" />
+            <div class="moment-caption">
+              <p>Konten PKKMB</p>
+              <p>10 Juli 2025</p>
+            </div>
+          </div>
+          <div
+            class="moment-item"
+            data-moment-src="https://via.placeholder.com/600x400/010101/175468?text=MOMENT+3+FULL"
+            data-moment-caption="Momen tak terlupakan di acara peresmian."
+          >
+            <img src="img/moment6.jpg" alt="Moment 3" />
+            <div class="moment-caption">
+              <p>Dekan Terkerenn</p>
+              <p>Juli 20 2025</p>
+            </div>
+          </div>
+          <div
+            class="moment-item"
+            data-moment-src="https://via.placeholder.com/600x400/010101/175468?text=MOMENT+3+FULL"
+            data-moment-caption="Momen tak terlupakan di acara peresmian."
+          >
+            <img src="img/moment7.jpg" alt="Moment 3" />
+            <div class="moment-caption">
+              <p>Bukber ala-ala</p>
+              <p>17 Maret 2025</p>
+            </div>
+          </div>
+          <div
+            class="moment-item"
+            data-moment-src="https://via.placeholder.com/600x400/010101/175468?text=MOMENT+3+FULL"
+            data-moment-caption="Momen tak terlupakan di acara peresmian."
+          >
+            <img src="img/moment9.jpg" alt="Moment 3" />
+            <div class="moment-caption">
+              <p>Tanjung Biru</p>
+              <p>23 Juli 2025</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Created by
+        <a href="https://www.instagram.com/zlkfy_038/" target="_blank"
+          >Moh. Zulkhifli Alpriady. | &copy; 2025</a
+        >
+      </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
